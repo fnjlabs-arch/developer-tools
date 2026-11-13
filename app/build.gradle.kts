@@ -14,15 +14,15 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
-    namespace = "com.unixshells.devbrowser"
+    namespace = "com.sadsha.devtools"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.unixshells.devbrowser"
-        minSdk = 35
+        applicationId = "com.sadsha.devtools"
+        minSdk = 24
         targetSdk = 35
-        versionCode = 3
-        versionName = "0.1.0"
+        versionCode = 4
+        versionName = "1.0.0"
     }
 
     signingConfigs {

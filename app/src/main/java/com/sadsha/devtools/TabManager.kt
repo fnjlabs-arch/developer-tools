@@ -1,4 +1,4 @@
-package com.unixshells.devbrowser
+package com.sadsha.devtools
 
 import android.annotation.SuppressLint
 import android.content.Context

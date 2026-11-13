@@ -1,4 +1,4 @@
-package com.unixshells.devbrowser
+package com.sadsha.devtools
 
 import android.content.Context
 import android.util.Log

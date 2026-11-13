@@ -14,5 +14,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "DevBrowser"
+rootProject.name = "SadShaDevTools"
 include(":app")

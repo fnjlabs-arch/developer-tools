@@ -20,7 +20,7 @@ PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 ADB="$HOME/Library/Android/sdk/platform-tools/adb"
 EMULATOR="$HOME/Library/Android/sdk/emulator/emulator"
 APK="$PROJECT_DIR/app/build/outputs/apk/debug/app-debug.apk"
-PACKAGE="com.unixshells.devbrowser"
+PACKAGE="com.sadsha.devtools"
 ACTIVITY="$PACKAGE/.MainActivity"
 STORE_DIR="$PROJECT_DIR/store-assets"
 
@@ -126,12 +126,12 @@ capture_screenshots() {
     echo -e "${YELLOW}Installing APK...${NC}"
     $ADB -s "$serial" install -r "$APK" 2>&1 | tail -1
 
-    # Screenshot 1: Browsing unixshells.com
-    echo -e "${YELLOW}[1/3] Browsing unixshells.com${NC}"
+    # Screenshot 1: Browsing example.com
+    echo -e "${YELLOW}[1/3] Browsing example.com${NC}"
     $ADB -s "$serial" shell am force-stop "$PACKAGE"
     sleep 1
     $ADB -s "$serial" shell am start -a android.intent.action.VIEW \
-        -d "https://unixshells.com" -n "$ACTIVITY" 2>/dev/null
+        -d "https://example.com" -n "$ACTIVITY" 2>/dev/null
     wait_page_load 10
     take_screenshot "$serial" "$out_dir/1_browse.png"
 
@@ -143,7 +143,7 @@ capture_screenshots() {
 
     # Screenshot 3: Navigate to another page with DevTools open to show Network activity
     echo -e "${YELLOW}[3/3] Browsing with DevTools open${NC}"
-    navigate_to "$serial" "https://unixshells.com/about"
+    navigate_to "$serial" "https://example.com"
     wait_page_load 10
     take_screenshot "$serial" "$out_dir/3_devtools_browse.png"
 

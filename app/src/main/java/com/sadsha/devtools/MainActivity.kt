@@ -1,4 +1,4 @@
-package com.unixshells.devbrowser
+package com.sadsha.devtools
 
 import android.annotation.SuppressLint
 import android.app.DownloadManager
@@ -30,7 +30,7 @@ import java.net.URLEncoder
 class MainActivity : AppCompatActivity() {
 
     companion object {
-        private const val TAG = "DevBrowser"
+        private const val TAG = "SadShaDevTools"
         private const val CDP_HTTP_PORT = 9222
         private const val CDP_WS_PORT = 9223
         private const val DEVTOOLS_PORT = 9224
@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        prefs = getSharedPreferences("devbrowser_settings", Context.MODE_PRIVATE)
+        prefs = getSharedPreferences("sadsha_devtools_settings", Context.MODE_PRIVATE)
 
         findViews()
         setupWindowInsets()

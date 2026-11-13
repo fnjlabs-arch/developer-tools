@@ -1,4 +1,4 @@
-package com.unixshells.devbrowser
+package com.sadsha.devtools
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -14,7 +14,7 @@ class SettingsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
 
-        prefs = getSharedPreferences("devbrowser_settings", Context.MODE_PRIVATE)
+        prefs = getSharedPreferences("sadsha_devtools_settings", Context.MODE_PRIVATE)
 
         setupViews()
     }
@@ -65,7 +65,7 @@ class SettingsActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.btnClearHistory).setOnClickListener {
-            val historyPrefs = getSharedPreferences("devbrowser_history", Context.MODE_PRIVATE)
+            val historyPrefs = getSharedPreferences("sadsha_devtools_history", Context.MODE_PRIVATE)
             historyPrefs.edit().clear().apply()
             Toast.makeText(this, "History cleared", Toast.LENGTH_SHORT).show()
         }

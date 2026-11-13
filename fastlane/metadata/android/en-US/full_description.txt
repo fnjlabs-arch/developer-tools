@@ -16,4 +16,4 @@ Features:
 
 Built for developers who code on Android — the missing piece between your terminal, your editor, and your browser.
 
-By Unix Shells
+By SadSha
